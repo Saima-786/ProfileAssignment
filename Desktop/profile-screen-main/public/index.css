@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Poppins&display=swap");
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: "poppins", sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-wrapper header {
+    width: 100%;
+    min-height: calc(100px + 15vw);
+}
+
+.left-col {
+    padding: 25px 20px;
+    text-align: center;
+    max-width: 350px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.image-container {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image-container img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+.image-container span {
+    position: absolute;
+    background-color: #2af66a;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    bottom: 3px;
+    right: 11px;
+    border: 2px solid #fff;
+}
+
+.left-col h2 {
+    margin-top: 60px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.left-col p {
+    font-size: 0.9rem;
+    color: #818181;
+    margin: 0;
+}
+
+.about {
+    justify-content: space-evenly;
+    position: relative;
+    margin: 35px 0px;
+    
+}
+
+.about li {
+    display: flex;
+    flex-direction: column;
+    color: #818181;
+    font-size: 0.9rem;
+}
+
+.about li span {
+    color: #1d1d1d;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.about::after {
+    position: absolute;
+    content: "";
+    bottom: -16px;
+    display: block;
+    background: #ccc;
+    height: 1px;
+    width: 100%;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #1d1d1d;
+    line-height: 1.5rem
+}
+
+.content ul {
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.content ul li {
+    font-size: 1.3rem;
+}
+.right-col nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    justify-content: space-between;
+}
+.right-col ul{
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+}
+.right-col ul a{
+    color: #818181;
+}
+.right-col ul li:nth-child(1) a{
+    color: #1d1d1d;;
+    font-weight: 600;
+}
+
+.right-col button{
+    border: none;
+    margin-top: 20px;
+    background: #0091ff;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 4px;
+}
+
+.right-col button:hover{
+    opacity: 0.8;
+}
+
+.post-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+/*post css*/
+.post {
+    max-width: 95%;
+    width: 100%;
+    background: rgb(251, 255, 254);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.heading h2 {
+    margin: 0;
+}
+
+.heading p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.post p {
+    padding: 10px;
+    margin: 0;
+}
+
+.meta {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.meta h3 {
+    margin: 0;
+    color: #333;
+    font: 1 rem;
+}
+.meta h3 span{
+    color: aqua;
+}
+
+.meta p {
+    margin: 0;
+    color: #777;
+}
+
+
+
+@media (min-width:868px) {
+    .cols-container{
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 50px;
+        margin: 0 auto;
+        /* width: 90%; */
+        max-width: 1200px;
+        justify-content: space-between;
+
+
+    }
+    .left-col{
+        padding: 25px 0;
+    }
+    .right-col nav ul{
+        flex-direction: row;
+        gap: 30px;
+    }
+
+}
+@media (min-width:1077px) {
+    .left-col{
+        margin: 0;
+        margin-right: auto;
+    }
+    .right-col nav{
+        flex-direction: row;
+    }
+    .button{
+        margin-top: 0;
+    }
+}
